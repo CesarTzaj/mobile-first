@@ -1,0 +1,41 @@
+.tables{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    }
+    .tables .second-table {
+        display: flex;
+    }
+    
+    .tables .first-table.show{
+        display: flex;
+    }
+    .tables .second-table.show{
+        display: flex;
+        flex-direction: column;
+    }
+    .buttom-right{
+        display: none;
+    }
+
+.first-table{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+.second-table{
+    display: flex;
+    flex-direction: column;
+}
+
+.second-section-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70rem;
+}
+.second-section-box div{
+    justify-content: space-between;
+    width: 28.8rem;
+    height: 15.2rem;
+    margin: 2rem auto;
+}

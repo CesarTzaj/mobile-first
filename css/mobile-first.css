@@ -1,0 +1,641 @@
+/*
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más
+*/
+:root{
+    /* Colores */
+    --table-letter-orange: #FF9536;
+    --bicoin-orange: #f7931a;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1a9af7;
+    --soft-blue: #e7f5ff;
+    --warm-black:#201E1C;
+    --warm-black1:#282623;
+    --grey: #bababa;
+    --gray: #757575;
+    --gray1:#808080;
+    --white-off:#FAF8F7;
+    --just-white:#FFFFFF;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+body{
+    min-width: 31.5rem;
+      position: relative;
+}
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 31.5rem;
+    height: 33.4rem;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header img{
+    width: 15rem;
+    height: 2.4rem;
+    margin-top: 4rem;
+    align-self: center;
+}
+.header-tittle-container{
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: 90rem;
+    height: 21.8rem;
+    margin-top: 4rem;
+    text-align: center;
+    align-self: center;
+}
+.header-tittle-container h1{
+    max-width: 45rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    margin: 0 auto;
+    color: var(--just-white);
+}
+.header-tittle-container p{
+    max-width: 30rem;
+    margin: 3.5rem auto 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+.header-tittle-container .header-buttom{
+    position: absolute;
+    top: 27rem;
+    left: calc(50% - 11.45rem);
+    display: block;
+    margin-top: 3.5rem;
+    padding: 1.5rem;
+    width: 22.9rem;
+    height: 4.8rem;
+    background-color: var(--white-off) ;
+    /* sombra */
+    box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--warm-black);
+}
+.header-buttom span{
+    display: inline-block;
+    width: 1.3rem;
+    height: 0.8rem;
+    margin-left: 00.8rem;
+    background-image: url('../assets/iconos/arrow-down.png');
+}
+ main{
+    background-color: var(--white-off);
+    width: 100%;
+    min-width: 32rem
+}
+.first-section{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 100%;
+min-width: 32rem;
+height: 83.5rem;
+text-align: center;
+}
+.first-section img{
+    width: 19.5rem;
+    height: 19.5rem;
+    margin-top: 5.9rem;
+}
+.first-section h2{
+    width: 288px;
+    height: 52px;
+    margin: 4rem auto 0;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--warm-black);
+}
+.first-section .first-section-text p{
+    margin: 2.4rem auto 0;
+    width: 85%;
+    min-width: 25rem;
+    max-width: 40rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--gray);
+}
+.coin-table{
+    display: flex;
+    width: 90%;
+    min-width: 23rem;
+    max-width: 32rem;
+    height: 25rem;
+    margin: 1.2rem auto 0;
+    font-family: 'Inter' sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+}
+.first-section .coin-table {
+    display: flex;
+    flex-direction: column;
+}
+.first-section .coin-table .first-title {
+    position:relative;
+    width: 10rem;
+    height: 2.3rem;
+    
+    margin-top: 1.4rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--table-letter-orange);
+}
+.first-section .coin-table .second-title {
+    position:relative;
+    width: 10rem;
+    height: 2.3rem;
+    margin-top: 1.4rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+}
+.coin-table table{
+    margin: 1.2rem auto 0;
+    width: 90%;
+    max-width: 28rem;
+    height: 100%;
+}
+.coin-table td{
+    width: 50% ;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    text-align: center;
+    color: #B5B0AC;
+    background-color: var(--just-white);
+}
+.first-section .coin-table .top-left-corner{
+    border-radius: 1.5rem 0 0 0;
+}
+.first-section .coin-table .top-right-corner{
+    border-radius:  0 1.5rem 0 0;
+}
+.first-section .coin-table .bottom-left-corner{
+    border-radius: 0 0 0 1.5rem;
+
+}
+.first-section .coin-table .bottom-right-corner{
+    border-radius:  0 0  1.5rem 0;
+}
+.first-section .coin-table .right-side{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    color: var(--gray);
+}
+.first-section .coin-table .down{
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 1.35rem;
+    background-image: url('../assets/iconos/trending-down.png');
+}
+.first-section .coin-table .up{
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 1.35rem;
+    background-image: url('../assets/iconos/trending-up.png');
+}
+.buttom-right{
+    position: absolute;
+    width: 2.8rem ;
+    height: 2.8rem;
+    top: 90.7rem;
+    right: calc(50% - 30rem/2);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../assets/iconos/right.png');
+    cursor: pointer;
+}
+.first-section .coin-table .left{
+    left: calc(50% - 30rem/2);
+    background-image: url('../assets/iconos/previous.png');
+}
+.tables{
+justify-content: center;
+align-content: center;
+justify-self: center;
+justify-items: center;
+align-self: center;
+display: flex;
+flex-direction: column;
+}
+.tables .second-table {
+    display: none;
+}
+
+.tables .first-table.show{
+    display: none;
+}
+.tables .second-table.show{
+    display: flex;
+    flex-direction: column;
+}
+ .first-section .tables .update{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 24rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background-color: #ffe9d4;
+    margin: 2rem auto 8em;
+}
+.tables .update p{
+    font-size: 1.8rem;
+    color: #2a2825;
+}
+.tables .update span{
+    font-size: 1.6rem;
+    color: #686057;
+}
+
+.first-section .tables .second-text{
+    background-color: #e7f5ff;
+}
+.hojuela{
+    position: absolute;
+    width: 5rem;
+    height: 3rem;
+    top: 115rem;
+    left: calc(50% - 3.5rem);
+    background-image: url('../assets/imagenes/hojuela.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+.second-section{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    padding-bottom: 6.4rem;
+    background-color: var(--warm-black);
+}
+.text{
+    width: 100%;
+    min-width: 28rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.text h1{
+    margin-top: 6.4rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+.text p{
+    margin: 2.4rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--gray1);
+}
+.second-section-box{
+    display: block;
+    margin: 0 auto;
+}
+.second-section-box div{
+    width: 28.8rem;
+    height: 15.2rem;
+    margin-top: 1.6rem;
+    justify-content: center;
+    background-color: var(--warm-black1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 0.4rem;
+}
+.second-section .second-section-box p{
+    width: 25.2rem;
+    margin: 1rem auto 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+.second-section .second-section-box .text-box{
+    width: 25.2rem;
+    margin: 0.5rem auto  0 ;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--gray1);
+}
+.second-section .second-section-box img{
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin:  1.4rem 0 0 1.6rem  ;
+
+}
+.third-section{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+ .picture{
+    width: 100%;
+    min-width: 32rem;
+    margin: 0 auto;
+    height: 50vh;
+    background-image: url('../assets/imagenes/1prueva.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.third-section .picture p{
+    position: absolute;
+    top: 214.5rem;
+    left: calc(50% - 16.2rem / 2);
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--just-white);
+}
+.third-section-text{
+    width: 100%;
+    min-width: 28rem;
+    margin: 0 auto;
+}
+.third-section-text h1{
+    width: 90%;
+    margin: 8.2rem auto 0;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: var(--warm-black);
+}
+.third-section-text p{
+    width: 90%;
+    margin: 2.4rem auto 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: var(--gray);
+}
+
+
+.third-section-price-scroll{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 65.2rem;
+    min-width: 31.5rem;
+    margin: 4.8rem auto 0;
+    overflow: hidden;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.third-section-price-scroll .plan-container-card{
+    display: flex;
+    scroll-snap-align: center;
+    flex-direction: column;
+    position: relative;
+    width: 19rem;
+    min-width: 19.5rem;
+    height: 24.7rem;
+    margin: 3rem 1rem 0;
+    background-color: var(--just-white);  
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+}
+.third-section-price-scroll::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+.third-section-price-scroll .text-recomend{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 10.1rem;
+    height: 3.1rem;
+    /* margin: 0 auto; */
+    top: -3rem;
+    left: calc(50% - 10.1rem/2);
+    border-radius: 0.8rem;
+    background-color: var(--bicoin-orange);
+}
+.text-recomend span{
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    align-items: center;
+    text-align: center;
+    color: var(--just-white);
+}
+.third-section-payment{
+    display:block;
+    width: 10rem;
+    height: 1.8rem;
+    margin: 3.1rem auto 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #000000;
+}
+.third-section-price-per-year{
+    display: block;
+    width: 6.8rem;
+    height: 6.3rem;
+    margin: 0.8rem auto 0;
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 6.3rem;
+    letter-spacing: -0.008rem;
+    text-align: center;
+    color: #000000;
+}
+.third-section-dollar{
+    display: flex;
+    position: absolute;
+    width: 0.8rem;
+    height: 1.5rem;
+    font: 2.5rem;
+    left: calc(50% - 6.8rem/2);
+    background-image: url('../assets/iconos/$dollar.png');
+    background-repeat: no-repeat;
+  }
+.third-section-plan-advatange{
+    width: 80%;
+    align-self: center;
+    margin-top: 0.9rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: var(--gray);
+}
+.buttom{
+    width: 15.1rem;
+    height: 4.8rem;
+    margin: 1.6rem auto 0;
+    background-color: var(--white-off);
+    border: 0.2rem solid var(--bicoin-orange);
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.buttom span{
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-right: 2.5rem;
+}
+.third-section-price-scroll .buttom .arrow{
+    display: inline-block;
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    top: 18.7rem;
+    left: 14rem;
+    background-image: url('../assets/iconos/arrow-right.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.forth-section{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    min-width: 32rem;
+    max-width: 37.7rem;
+    height: 44.9rem;
+    padding-bottom: 10rem;
+}
+.forth-section h1{
+    margin: 6.4rem auto 3.2rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: var(--warm-black);
+}
+.forth-section .forth-section-option{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 95%;
+    min-width: 28rem;
+    height: 4rem;
+    margin: 0 auto 1.5rem;
+}
+.forth-section .forth-section-option p{
+    width: 83%;
+    min-width: 26rem;
+    max-width: 34.44;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--gray);
+    /* background-color: #1a9af7; */
+}
+.forth-section  .drop-icon{
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url('../assets/iconos/next.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transform: rotate(90deg);
+    border: #e7f5ff 0rem solid;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    min-width: 32rem;
+    height: 15rem;
+    background-color: var(--bicoin-orange);
+}
+footer section{
+    display: flex;
+    width: 60%;
+    min-width: 32rem;
+    margin: 4rem auto 0;
+    
+}
+.footer-text{
+    width: 50%;
+    font-weight: 500;
+
+    
+}
+.footer-text li{
+    list-style: none;
+    margin: 0.8rem auto;
+    padding-left: 5rem;
+}
+.footer-text a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: var(--just-white);
+}
+footer section div{
+    width: 50%;
+    height: 100%;
+}
+.logo{
+    display: flex;
+    width: 4.05;
+    height: 2.4rem;
+    margin:  auto ;
+    background-image: url('../assets/imagenes/hojuela.png') ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.brand{
+    display: flex;
+    width: 6.4rem;
+    height: 1.8rem;
+    margin: 00.8rem auto 0;
+    background-image: url('../assets/iconos/Batatabit.png') ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
