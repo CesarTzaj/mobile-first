@@ -5,6 +5,8 @@
 4. Estilos visuales --> box-shadow, border-radius, gradient, etc
 5. Otros --> reglas CSS y más
 */
+@media screen and ( orientation: landscape ) {
+    
 :root{
     /* Colores */
     --table-letter-orange: #FF9536;
@@ -19,6 +21,7 @@
     --gray1:#808080;
     --white-off:#FAF8F7;
     --just-white:#FFFFFF;
+    --font-small: 500;
 }
 *{
     box-sizing: border-box;
@@ -638,4 +641,5 @@ footer section div{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
 }
