@@ -5,7 +5,7 @@
 4. Estilos visuales --> box-shadow, border-radius, gradient, etc
 5. Otros --> reglas CSS y más
 */
-@media screen and ( orientation: landscape ) {
+
     
 :root{
     /* Colores */
@@ -45,8 +45,8 @@ header{
     min-width: 31.5rem;
     height: 33.4rem;
     text-align: center;
-   background-image: radial-gradient(circle at 72.96% 27.04%, #dced69 0, #c8eb67 12.5%, #afe462 25%, #91da5a 37.5%, #6acc50 50%, #38be48 62.5%, #00b347 75%, #00ab4b 87.5%, #00a754 100%);
-    <!--  background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); -->
+   /* background-image: radial-gradient(circle at 72.96% 27.04%, #dced69 0, #c8eb67 12.5%, #afe462 25%, #91da5a 37.5%, #6acc50 50%, #38be48 62.5%, #00b347 75%, #00ab4b 87.5%, #00a754 100%); */
+     background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); 
 }
 header img{
     width: 15rem;
