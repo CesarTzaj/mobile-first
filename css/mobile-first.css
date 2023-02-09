@@ -45,8 +45,8 @@ header{
     min-width: 31.5rem;
     height: 33.4rem;
     text-align: center;
-    /* background: linear-gradient(207.8deg, #201E1C 50.69%, #F7931A 100%);  */
-    background: linear-gradient(20.8deg, #201E1C 16.69%, #F7931A 100%); 
+    background: linear-gradient(207.8deg, #201E1C 10.69%, #F7931A 100%);  
+    /* background: linear-gradient(20.8deg, #201E1C 16.69%, #F7931A 100%);  */
 }
 header img{
     width: 15rem;
